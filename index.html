@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aztech I · FTC 17625</title>
+  <meta
+    name="description"
+    content="Aztech I, equipo 17625 de FIRST Tech Challenge desde la CDMX. Innovación, inclusión y tecnología como herramienta de cambio social."
+  />
+  <link rel="icon" href="images/brand/logo.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- ───────── Navbar ───────── -->
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo" aria-label="Inicio">
+        <img src="images/brand/wordmark.png" alt="Aztech I" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#nosotros" data-en="About us" data-fr="À propos">Quiénes somos</a></li>
+        <li class="nav-dropdown">
+          <button type="button" class="nav-dropdown-btn" aria-expanded="false" aria-haspopup="true" data-en='Our Pillars <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>' data-fr='Nos piliers <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>'>
+            Our Pillars
+            <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+          </button>
+          <ul class="nav-dropdown-menu">
+            <li><a href="environment.html" data-en="Environment" data-fr="Environnement">Environment</a></li>
+          </ul>
+        </li>
+        <li><a href="#trayectoria" data-en="Journey" data-fr="Parcours">Trayectoria</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="#contacto" data-en="Contact" data-fr="Contact">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Idioma / Language / Langue">
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        </div>
+        <button type="button" class="nav-burger" aria-label="Menú" aria-expanded="false" aria-controls="site-drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ───────── Menú lateral desplegable ───────── -->
+  <div class="drawer-backdrop" hidden></div>
+  <aside id="site-drawer" class="drawer" aria-hidden="true" aria-label="Menú">
+    <div class="drawer-top">
+      <span class="drawer-title" data-en="Menu" data-fr="Menu">Menú</span>
+      <button type="button" class="drawer-close" aria-label="Cerrar menú">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12" /></svg>
+      </button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html" data-en="Home" data-fr="Accueil">Inicio</a>
+      <a href="#nosotros" data-en="About us" data-fr="À propos">Quiénes somos</a>
+      <a href="#identidad" data-en="Identity" data-fr="Identité">Identidad</a>
+      <a href="#trayectoria" data-en="Journey" data-fr="Parcours">Trayectoria</a>
+      <span class="drawer-group" data-en="Our Pillars" data-fr="Nos piliers">Our Pillars</span>
+      <a href="environment.html" class="drawer-sub" data-en="Environment" data-fr="Environnement">Environment</a>
+      <a href="https://aztech-17625-our-impact.vercel.app" data-en="Impact" data-fr="Impact">Impacto</a>
+      <a href="#contacto" data-en="Contact" data-fr="Contact">Contacto</a>
+      <a href="#sponsors">Sponsors</a>
+      <a href="https://www.instagram.com/aztech_1_17625/" target="_blank" rel="noopener noreferrer" data-en="Follow us" data-fr="Suivez-nous">Síguenos</a>
+    </nav>
+  </aside>
+
+  <!-- ───────── Hero ───────── -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-fade"></div>
+    <span class="hero-vertical">FIRST TECH CHALLENGE</span>
+
+    <img class="hero-logo animate-fade-up" src="images/brand/hero-logo.png" alt="Aztech I" />
+    <img class="hero-art animate-fade-up" src="images/brand/hero-art.png" alt="17625" />
+
+    <div class="hero-cta animate-fade-up">
+      <a href="#identidad" class="btn btn-accent" data-en="Get to know us" data-fr="Découvrez-nous">Conócenos</a>
+      <a href="https://www.instagram.com/aztech_1_17625/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-en="Contact us" data-fr="Contactez-nous">Contáctanos</a>
+    </div>
+
+    <a href="#identidad" class="scroll-cue" aria-label="Bajar">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5v14M5 12l7 7 7-7" />
+      </svg>
+    </a>
+  </section>
+
+  <!-- ───────── 1. Identidad / Inclusión ───────── -->
+  <section id="identidad" class="container section">
+    <span class="badge" data-en="Identity" data-fr="Identité">Identidad</span>
+    <h2 class="section-title max-w-2xl" style="margin-top: 1rem" data-en="What makes us Aztec Warriors" data-fr="Ce qui fait de nous des Guerriers Aztèques">Lo que nos hace Guerreros Aztecas</h2>
+    <div class="cards-3">
+      <div class="card">
+        <h3 data-en="Inclusion" data-fr="Inclusion">Inclusión</h3>
+        <p data-en="We bring together people from diverse backgrounds —girls and boys, teenagers, women, migrants and people with disabilities or in rehabilitation— giving them the opportunity to grow in STEM through robotics." data-fr="Nous réunissons des personnes d'horizons divers —filles et garçons, adolescents, femmes, migrants et personnes en situation de handicap ou en réadaptation— en leur donnant la possibilité de se développer dans les STEM grâce à la robotique.">
+          Integramos a personas de orígenes diversos —niñas y niños, adolescentes,
+          mujeres, migrantes y personas con discapacidad o en rehabilitación—
+          dándoles la oportunidad de desarrollarse en STEM a través de la robótica.
+        </p>
+      </div>
+      <div class="card">
+        <h3 data-en="Women in STEM" data-fr="Les femmes dans les STEM">Mujeres en STEM</h3>
+        <p data-en="We adopted pink-magenta as our signature color, reflecting our commitment to inspiring girls and women to pursue careers in STEM fields." data-fr="Nous avons adopté le rose-magenta comme couleur emblématique, reflétant notre engagement à inspirer les filles et les femmes à poursuivre des carrières dans les domaines STEM.">
+          Adoptamos el rosa-magenta como color insignia, reflejando nuestro
+          compromiso de inspirar a niñas y mujeres a seguir carreras en campos
+          STEM.
+        </p>
+      </div>
+      <div class="card">
+        <h3 data-en="Social change" data-fr="Changement social">Cambio social</h3>
+        <p data-en="We believe technology must be accessible to all people and used as a tool for social change, not just as a technical end in itself." data-fr="Nous croyons que la technologie doit être accessible à tous et utilisée comme un outil de changement social, et non comme une simple fin technique en soi.">
+          Creemos que la tecnología debe ser accesible para todas las personas y
+          usarse como herramienta de cambio social, no solo como un fin técnico en
+          sí mismo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── 2. Nosotros / Historia ───────── -->
+  <section id="nosotros" class="container section">
+    <span class="badge" data-en="About us" data-fr="À propos">Nosotros</span>
+    <h2 class="section-title" style="margin-top: 1rem" data-en="More than a robotics team" data-fr="Plus qu'une équipe de robotique">Más que un equipo de robótica</h2>
+    <div class="about-text" style="max-width: 52rem;">
+      <p data-en="We are Aztech I (FTC 17625), a FIRST Tech Challenge team in Mexico passionate about innovation, inclusion and the intentional use of technology. We bring together people from diverse backgrounds —children, teenagers, women, migrants and people with disabilities or in rehabilitation— to grow in STEM fields through robotics and to raise awareness about reducing our carbon footprint." data-fr="Nous sommes Aztech I (FTC 17625), une équipe FIRST Tech Challenge au Mexique passionnée par l'innovation, l'inclusion et l'usage intentionnel de la technologie. Nous réunissons des personnes d'horizons divers —enfants, adolescents, femmes, migrants et personnes en situation de handicap ou en réadaptation— pour se développer dans les domaines STEM grâce à la robotique et sensibiliser à la réduction de l'empreinte carbone.">
+        Somos Aztech I (FTC 17625), un equipo de FIRST Tech Challenge en
+        México apasionado por la innovación, la inclusión y el uso intencional
+        de la tecnología. Integramos a personas de orígenes diversos —niños,
+        adolescentes, mujeres, migrantes y personas con discapacidad o en
+        rehabilitación— para desarrollarse en áreas STEM mediante la robótica y
+        generar conciencia sobre la reducción de la huella de carbono.
+      </p>
+      <p style="margin-top: 1rem;" data-en="We believe technology must be <strong>accessible to everyone and a tool for social change</strong>, not just a technical end in itself. We were born in 2019 within FTC to shape young leaders capable of transforming their environment, under a philosophy of constant growth, collaboration and continuous learning." data-fr="Nous croyons que la technologie doit être <strong>accessible à tous et un outil de changement social</strong>, et non une simple fin technique. Nous sommes nés en 2019 au sein de la FTC pour former de jeunes leaders capables de transformer leur environnement, selon une philosophie de croissance constante, de collaboration et d'apprentissage continu.">
+        Creemos que la tecnología debe ser
+        <strong>accesible para todos y una herramienta de cambio social</strong>,
+        no solo un fin técnico. Nacimos en 2019 dentro de FTC para formar
+        jóvenes líderes capaces de transformar su entorno, bajo una filosofía
+        de crecimiento constante, colaboración y aprendizaje continuo.
+      </p>
+      <p style="margin-top: 1rem;" data-en="We have evolved season after season: in Ultimate Goal we consolidated our identity, and today, in Decode (2026), we have earned achievements such as the Inspire Award, the Sustain Award and the Think Award (three times), a reflection of the strength of our engineering and our impact on the community." data-fr="Nous avons évolué saison après saison : lors d'Ultimate Goal nous avons consolidé notre identité, et aujourd'hui, avec Decode (2026), nous cumulons des distinctions comme l'Inspire Award, le Sustain Award et le Think Award (à trois reprises), reflet de la solidité de notre ingénierie et de notre impact sur la communauté.">
+        Hemos evolucionado temporada a temporada: en Ultimate Goal consolidamos
+        nuestra identidad, y hoy, en Decode (2026), acumulamos logros como el
+        Inspire Award, el Sustain Award y el Think Award (en tres ocasiones), reflejo
+        de la solidez de nuestra ingeniería y nuestro impacto en la comunidad.
+      </p>
+      <div class="badges" style="margin-top: 1.5rem;">
+        <span class="badge badge--award" title="El máximo reconocimiento de FTC">Inspire Award</span>
+        <span class="badge badge--award" title="Obtenido en múltiples ocasiones">Think Award · ×3</span>
+        <span class="badge badge--award" title="Into the Deep · Mexico Championship">Think Award · Nacional</span>
+        <span class="badge badge--award" title="Decode · CDMX 2025">Sustain Award</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── 3. Misión / Visión / Propósito (2 columnas) ───────── -->
+  <section class="container section">
+    <div class="about-media">
+      <div class="team-photo-wrap">
+        <img class="team-photo" src="images/brand/team.png" alt="Equipo Aztech I 17625" />
+      </div>
+      <div class="mvp">
+        <div class="card">
+          <h3 data-en="Mission" data-fr="Mission">Misión</h3>
+          <p data-en="To shape well-rounded leaders in robotics, engineering and teamwork, capable of developing innovative solutions and high-impact social projects that address real problems in our community." data-fr="Former des leaders complets en robotique, en ingénierie et en travail d'équipe, capables de développer des solutions innovantes et des projets sociaux à fort impact qui répondent à de vrais problèmes de notre communauté.">
+            Formar líderes integrales en robótica, ingeniería y trabajo en equipo,
+            capaces de desarrollar soluciones innovadoras y proyectos sociales de
+            alto impacto que atiendan problemas reales de nuestra comunidad.
+          </p>
+        </div>
+        <div class="card">
+          <h3 data-en="Vision" data-fr="Vision">Visión</h3>
+          <p data-en="To achieve it through a holistic training model based on FIRST and STEAM, promoting technical excellence, constant innovation, collaborative work and social commitment, inspiring more young people to transform their environment through science and technology." data-fr="Y parvenir grâce à un modèle de formation intégral fondé sur FIRST et STEAM, qui favorise l'excellence technique, l'innovation constante, le travail collaboratif et l'engagement social, en inspirant davantage de jeunes à transformer leur environnement par la science et la technologie.">
+            Lograrlo a través de un modelo de formación integral basado en FIRST y
+            STEAM, que promueve la excelencia técnica, la innovación constante, el
+            trabajo colaborativo y el compromiso social, inspirando a más jóvenes a
+            transformar su entorno mediante la ciencia y la tecnología.
+          </p>
+        </div>
+        <div class="card">
+          <h3 data-en="Purpose" data-fr="Raison d'être">Propósito</h3>
+          <p data-en="Because we believe in the power of robotics and education as tools to transform lives, break down barriers and create positive, sustainable and meaningful change in society." data-fr="Parce que nous croyons au pouvoir de la robotique et de l'éducation comme outils pour transformer des vies, abattre les barrières et générer un changement positif, durable et significatif dans la société.">
+            Porque creemos en el poder de la robótica y la educación como
+            herramientas para transformar vidas, derribar barreras y generar un
+            cambio positivo, sostenible y significativo en la sociedad.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── 4. Trayectoria FIRST ───────── -->
+  <section id="trayectoria" class="container section">
+    <span class="badge" data-en="Journey" data-fr="Parcours">Trayectoria</span>
+    <h2 class="section-title" style="margin-top: 1rem" data-en="Our FIRST journey" data-fr="Notre parcours FIRST">Nuestra trayectoria FIRST</h2>
+    <p class="lead" style="margin-top: 0.75rem;" data-en="Hover over each season to see its image, events and awards." data-fr="Survolez chaque saison pour voir son image, ses événements et ses récompenses.">Pasa el cursor sobre cada temporada para ver su imagen, eventos y premios.</p>
+
+    <div class="card traj-card" style="margin-top: 2rem;">
+      <ol class="traj-list">
+        <!-- Ultimate Goal -->
+        <li class="season-row">
+          <span class="season-num">1</span>
+          <span class="season-label">Ultimate Goal</span>
+          <span class="season-year">2020</span>
+          <div class="season-popup">
+            <div class="season-popup-inner">
+              <div class="season-photo-meta">
+                <img class="season-photo" src="images/seasons/ultimate-goal.png" alt="Ultimate Goal" />
+                <div class="season-photo-label">Ultimate Goal</div>
+                <div class="season-photo-year">2020</div>
+              </div>
+              <p class="season-empty" data-en="Season participation — no notable results on record." data-fr="Participation à la saison — aucun résultat notable enregistré.">Participación en temporada — sin resultados destacados registrados.</p>
+            </div>
+          </div>
+        </li>
+        <!-- Freight Frenzy -->
+        <li class="season-row">
+          <span class="season-num">2</span>
+          <span class="season-label">Freight Frenzy</span>
+          <span class="season-year">2021</span>
+          <div class="season-popup">
+            <div class="season-popup-inner">
+              <div class="season-photo-meta">
+                <img class="season-photo" src="images/seasons/freight-frenzy.png" alt="Freight Frenzy" />
+                <div class="season-photo-label">Freight Frenzy</div>
+                <div class="season-photo-year">2021</div>
+              </div>
+              <ul class="season-events">
+                <li><span class="event-name">Mexico Championship</span></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- Power Play -->
+        <li class="season-row">
+          <span class="season-num">3</span>
+          <span class="season-label">Power Play</span>
+          <span class="season-year">2022</span>
+          <div class="season-popup">
+            <div class="season-popup-inner">
+              <div class="season-photo-meta">
+                <img class="season-photo" src="images/seasons/power-play.png" alt="Power Play" />
+                <div class="season-photo-label">Power Play</div>
+                <div class="season-photo-year">2022</div>
+              </div>
+              <ul class="season-events">
+                <li>
+                  <span class="event-name">MX FTC Power Play Regional Centro (Toluca)</span>
+                  <span class="event-award">Finalist Alliance · 1st Team Selected</span>
+                </li>
+                <li>
+                  <span class="event-name">MX Power Play Campeonato Nacional FTC México (CDMX)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- Center Stage -->
+        <li class="season-row">
+          <span class="season-num">4</span>
+          <span class="season-label">Center Stage</span>
+          <span class="season-year">2023</span>
+          <div class="season-popup">
+            <div class="season-popup-inner">
+              <div class="season-photo-meta">
+                <img class="season-photo" src="images/seasons/center-stage.png" alt="Center Stage" />
+                <div class="season-photo-label">Center Stage</div>
+                <div class="season-photo-year">2023</div>
+              </div>
+              <ul class="season-events">
+                <li>
+                  <span class="event-name">MX Torneo Regional FTC Ferrería CDMX</span>
+                  <span class="event-award">Finalist Alliance · Captain</span>
+                </li>
+                <li><span class="event-name">Mexico Torneo Nacional FTC CDMX</span></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- Into the Deep -->
+        <li class="season-row">
+          <span class="season-num">5</span>
+          <span class="season-label">Into the Deep</span>
+          <span class="season-year">2024</span>
+          <div class="season-popup">
+            <div class="season-popup-inner">
+              <div class="season-photo-meta">
+                <img class="season-photo" src="images/seasons/into-the-deep.png" alt="Into the Deep" />
+                <div class="season-photo-label">Into the Deep</div>
+                <div class="season-photo-year">2024</div>
+              </div>
+              <ul class="season-events">
+                <li>
+                  <span class="event-name">Torneo Regional FTC CDMX</span>
+                  <span class="event-award">Inspire Award 2nd Place</span>
+                </li>
+                <li>
+                  <span class="event-name">Torneo Regional FTC Toluca</span>
+                  <span class="event-award">Think Award</span>
+                </li>
+                <li>
+                  <span class="event-name">Mexico Championship</span>
+                  <span class="event-award">Think Award</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- Decode -->
+        <li class="season-row">
+          <span class="season-num">6</span>
+          <span class="season-label is-last">Decode</span>
+          <span class="season-year">2025</span>
+          <div class="season-popup">
+            <div class="season-popup-inner">
+              <div class="season-photo-meta">
+                <img class="season-photo" src="images/seasons/decode.png" alt="Decode" />
+                <div class="season-photo-label">Decode</div>
+                <div class="season-photo-year">2025</div>
+              </div>
+              <ul class="season-events">
+                <li>
+                  <span class="event-name">Torneo Regional Cuautitlán</span>
+                  <span class="event-award">Finalist Alliance · 1st Team Selected</span>
+                  <span class="event-award">Inspire Award</span>
+                </li>
+                <li>
+                  <span class="event-name">Torneo Regional CDMX</span>
+                  <span class="event-award">Sustain Award</span>
+                </li>
+                <li>
+                  <span class="event-name">Torneo Regional FTC Toluca</span>
+                  <span class="event-award">Think Award 2nd Place</span>
+                </li>
+                <li><span class="event-name">Mexico Championship</span></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ol>
+      <div class="season-logos">
+        <img src="images/season-logos/ultimate-goal.png" alt="Ultimate Goal" loading="lazy" />
+        <img src="images/season-logos/freight-frenzy.png" alt="Freight Frenzy" loading="lazy" />
+        <img src="images/season-logos/power-play.png" alt="Power Play" loading="lazy" />
+        <img src="images/season-logos/center-stage.png" alt="Center Stage" loading="lazy" />
+        <img src="images/season-logos/into-the-deep.png" alt="Into the Deep" loading="lazy" />
+        <img src="images/season-logos/decode.png" alt="Decode" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── 5. Aztech Warrior Cycle ───────── -->
+  <section class="container section">
+    <span class="badge" data-en="Identity &amp; growth" data-fr="Identité &amp; croissance">Identidad y crecimiento</span>
+    <h2 class="section-title" style="margin-top: 1rem">Aztech Warrior Cycle</h2>
+    <p class="lead" data-en="The Aztech Warrior Cycle reflects the team's identity and growth. It has three stages:" data-fr="L'Aztech Warrior Cycle reflète l'identité et la croissance de l'équipe. Il comprend trois étapes :">
+      El Aztech Warrior Cycle refleja la identidad y el crecimiento del equipo.
+      Consta de tres etapas:
+    </p>
+
+    <div class="cycle-grid">
+      <div class="cycle-stages">
+        <div class="cycle-stage">
+          <span class="cycle-n">1</span>
+          <h3><span class="cycle-tag">Etapa 1 · FTC</span></h3>
+          <p data-en="High-school students join the FTC team: they build their skills, learn teamwork and have their first FIRST experience." data-fr="Des lycéens rejoignent l'équipe FTC : ils développent leurs compétences, apprennent le travail d'équipe et vivent leur premier FIRST.">
+            Estudiantes de preparatoria entran al equipo de FTC: desarrollan sus
+            habilidades, aprenden a trabajar en equipo y viven su primer FIRST.
+          </p>
+        </div>
+        <div class="cycle-stage">
+          <span class="cycle-n">2</span>
+          <h3><span class="cycle-tag">Etapa 2 · FRC</span></h3>
+          <p data-en="After graduating they move up to FRC: more complexity, new skills and specialization, building on what they learned in FTC." data-fr="Après le lycée, ils passent en FRC : plus de complexité, de nouvelles compétences et une spécialisation, en s'appuyant sur les acquis du FTC.">
+            Al graduarse pasan a FRC, con mayor complejidad: desarrollan nuevas
+            habilidades y se especializan, usando lo aprendido en FTC como base.
+          </p>
+        </div>
+        <div class="cycle-stage cycle-stage--dark">
+          <span class="cycle-n">3</span>
+          <h3><span class="cycle-tag">Etapa 3 · Mentores — FIRST Alumni</span></h3>
+          <p data-en="They finish as students and return as mentors: guiding and supporting new generations, giving back what FIRST gave them." data-fr="Ils terminent comme étudiants et reviennent comme mentors : ils guident les nouvelles générations et rendent ce que FIRST leur a donné.">
+            Terminan su etapa como estudiantes y regresan como mentores: guían y
+            apoyan a las nuevas generaciones, devolviendo lo que FIRST les dio.
+          </p>
+        </div>
+      </div>
+      <figure class="cycle-figure">
+        <img src="images/brand/warrior-cycle.png" alt="Diagrama del Aztech Warrior Cycle: FTC → FRC → Mentores" loading="lazy" />
+      </figure>
+    </div>
+  </section>
+
+  <!-- ───────── 6. Equipo ───────── -->
+  <section class="container section">
+    <span class="badge" data-en="Team" data-fr="Équipe">Equipo</span>
+    <h2 class="section-title" style="margin-top: 1rem" data-en="Coaches &amp; mentors" data-fr="Coachs et mentors">Coaches y mentores</h2>
+    <div class="leads">
+      <div class="card lead-card">
+        <div class="lead-name">Jhonathan Tenorio</div>
+        <div class="lead-role">Head Coach</div>
+      </div>
+      <div class="card lead-card">
+        <div class="lead-name">Uriel Reyna Estrada</div>
+        <div class="lead-role">Coach</div>
+      </div>
+      <div class="card lead-card">
+        <div class="lead-name">Diego Escobar</div>
+        <div class="lead-role">Coach</div>
+      </div>
+    </div>
+    <div class="mentors">
+      <div class="card">
+        <h3 class="kicker">Business Mentors</h3>
+        <p>Ahtziri · Regina · Ana</p>
+      </div>
+      <div class="card">
+        <h3 class="kicker">Engineering Mentors</h3>
+        <p>Many · Dany</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── 7. Sponsors ───────── -->
+  <section id="sponsors" class="container section text-center">
+    <span class="badge" data-en="Sponsors" data-fr="Sponsors">Patrocinadores</span>
+    <h2 class="section-title" style="margin-top: 1rem" data-en="Those who drive us forward" data-fr="Ceux qui nous propulsent">Quienes nos impulsan</h2>
+    <p class="lead" style="margin-inline: auto" data-en="Our sponsors believe in the team's mission and in the impact of FIRST. We seek reciprocal, long-term relationships." data-fr="Nos sponsors croient en la mission de l'équipe et en l'impact de FIRST. Nous recherchons des relations réciproques et durables.">
+      Nuestros patrocinadores creen en la misión del equipo y en el impacto de
+      FIRST. Buscamos relaciones recíprocas y de largo plazo.
+    </p>
+    <div class="sponsors-box">
+      <div class="sponsors-grid">
+        <!-- ░░ PATROCINADOR 1 ░░ -->
+        <div class="sponsor" tabindex="0" style="--sp:#F2A900">
+          <img src="images/sponsors/grupo-salinas.png" alt="Grupo Salinas" />
+          <div class="sponsor-pop">
+            <span class="sp-cat" data-en="Conglomerate" data-fr="Conglomérat">Conglomerado</span>
+            <h4 class="sp-name">Grupo Salinas</h4>
+            <p class="sp-desc" data-en="Mexican <strong>conglomerate</strong> that brings together <strong>TV Azteca</strong>, <strong>Elektra</strong> and <strong>Banco Azteca</strong>, among other media, retail and finance companies." data-fr="<strong>Conglomérat</strong> mexicain réunissant <strong>TV Azteca</strong>, <strong>Elektra</strong> et <strong>Banco Azteca</strong>, parmi d'autres entreprises de médias, commerce et finance."><strong>Conglomerado</strong> mexicano que reúne a <strong>TV Azteca</strong>, <strong>Elektra</strong> y <strong>Banco Azteca</strong>, entre otras empresas de medios, comercio y finanzas.</p>
+          </div>
+        </div>
+        <!-- ░░ PATROCINADOR 2 ░░ -->
+        <div class="sponsor" tabindex="0" style="--sp:#2D9CDB">
+          <img src="images/sponsors/fundacion-azteca.png" alt="Fundación Azteca" />
+          <div class="sponsor-pop">
+            <span class="sp-cat" data-en="Philanthropy" data-fr="Philanthropie">Filantropía</span>
+            <h4 class="sp-name">Fundación Azteca</h4>
+            <p class="sp-desc" data-en="Grupo Salinas's <strong>social arm</strong> (1997): social, environmental and educational projects such as <strong>Plantel Azteca</strong> and <strong>Limpiemos México</strong>." data-fr="<strong>Branche sociale</strong> de Grupo Salinas (1997) : projets sociaux, environnementaux et éducatifs comme <strong>Plantel Azteca</strong> et <strong>Limpiemos México</strong>."><strong>Brazo social</strong> de Grupo Salinas (1997): proyectos sociales, ambientales y educativos como <strong>Plantel Azteca</strong> y <strong>Limpiemos México</strong>.</p>
+          </div>
+        </div>
+        <!-- ░░ PATROCINADOR 3 ░░ -->
+        <div class="sponsor" tabindex="0" style="--sp:#9B51E0">
+          <img src="images/sponsors/plantel-azteca.png" alt="Plantel Azteca" />
+          <div class="sponsor-pop">
+            <span class="sp-cat" data-en="Education" data-fr="Éducation">Educación</span>
+            <h4 class="sp-name">Plantel Azteca</h4>
+            <p class="sp-desc" data-en="A network of <strong>excellence schools</strong> sponsored by <strong>Fundación Azteca</strong> of Grupo Salinas. Its goal is to provide <strong>free education</strong> to talented young people from <strong>low-income</strong> backgrounds." data-fr="Un réseau d'<strong>écoles d'excellence</strong> parrainé par <strong>Fundación Azteca</strong> de Grupo Salinas. Son objectif : offrir une <strong>éducation gratuite</strong> à des jeunes talentueux issus de <strong>milieux modestes</strong>.">Plantel Azteca es una red de <strong>escuelas de excelencia</strong> auspiciada por <strong>Fundación Azteca</strong> de Grupo Salinas. Su objetivo es brindar <strong>educación gratuita</strong> a jóvenes talentosos de <strong>bajos recursos</strong> económicos.</p>
+          </div>
+        </div>
+        <!-- ░░ PATROCINADOR 4 ░░ -->
+        <div class="sponsor" tabindex="0" style="--sp:#E2001A">
+          <img src="images/sponsors/grupo-elektra.png" alt="Grupo Elektra" />
+          <div class="sponsor-pop">
+            <span class="sp-cat" data-en="Retail" data-fr="Commerce">Comercio</span>
+            <h4 class="sp-name">Grupo Elektra</h4>
+            <p class="sp-desc" data-en="Chain with <strong>thousands of stores</strong> across Latin America: electronics, appliances, motorcycles and <strong>financial services</strong>." data-fr="Chaîne aux <strong>milliers de magasins</strong> en Amérique latine : électronique, électroménager, motos et <strong>services financiers</strong>.">Cadena con <strong>miles de tiendas</strong> en América Latina: electrónica, electrodomésticos, motos y <strong>servicios financieros</strong>.</p>
+          </div>
+        </div>
+        <!-- ░░ PATROCINADOR 5 ░░ -->
+        <div class="sponsor" tabindex="0" style="--sp:#00A14B">
+          <img src="images/sponsors/banco-azteca.png" alt="Banco Azteca" />
+          <div class="sponsor-pop">
+            <span class="sp-cat" data-en="Banking" data-fr="Banque">Banca</span>
+            <h4 class="sp-name">Banco Azteca</h4>
+            <p class="sp-desc" data-en="Bank that brings <strong>financial services</strong> to communities with <strong>little or no access</strong> to traditional banking." data-fr="Banque qui apporte des <strong>services financiers</strong> aux communautés ayant <strong>peu ou pas d'accès</strong> à la banque traditionnelle.">Banco que lleva <strong>servicios financieros</strong> a comunidades con <strong>poco o nulo acceso</strong> a la banca tradicional.</p>
+          </div>
+        </div>
+        <!-- ░░ PATROCINADOR 6 ░░ -->
+        <div class="sponsor" tabindex="0" style="--sp:#0098DA">
+          <img src="images/sponsors/italika.png" alt="Italika" />
+          <div class="sponsor-pop">
+            <span class="sp-cat" data-en="Motorcycles" data-fr="Motos">Motocicletas</span>
+            <h4 class="sp-name">Italika</h4>
+            <p class="sp-desc" data-en="Mexican <strong>motorcycle brand</strong>, the country's <strong>sales leader</strong>, with its own service and parts network." data-fr="<strong>Marque de motos</strong> mexicaine, <strong>leader des ventes</strong> au pays, avec son propre réseau de service et de pièces.">Marca mexicana de <strong>motocicletas</strong>, <strong>líder en ventas</strong> en el país, con red propia de servicio y refacciones.</p>
+          </div>
+        </div>
+        <!-- ░░ PATROCINADOR 7 ░░ -->
+        <div class="sponsor" tabindex="0" style="--sp:#18B6D8">
+          <img src="images/sponsors/grupo-tierton.png" alt="Grupo Terton" />
+          <div class="sponsor-pop">
+            <span class="sp-cat" data-en="Technology" data-fr="Technologie">Tecnología</span>
+            <h4 class="sp-name">Grupo Terton</h4>
+            <p class="sp-desc" data-en="Mexican <strong>technology and telecommunications</strong> company: electrical equipment, cabling and communication solutions." data-fr="Entreprise mexicaine de <strong>technologie et télécommunications</strong> : équipements électriques, câblage et solutions de communication.">Empresa mexicana de <strong>tecnología y telecomunicaciones</strong>: equipos eléctricos, cableado y soluciones de comunicación.</p>
+          </div>
+        </div>
+
+        <!-- ░░ ¿PODRÍAS ESTAR AQUÍ? ░░ -->
+        <div class="sponsor sponsor--cta" tabindex="0">
+          <div class="sponsor-cta-inner">
+            <span class="sponsor-cta-label" data-en="You could be here" data-fr="Vous pourriez être ici">¿Podrías estar aquí?</span>
+          </div>
+          <div class="sponsor-pop">
+            <span class="sp-cat">Únete</span>
+            <h4 class="sp-name" data-en="Become a sponsor" data-fr="Devenez sponsor">Sé patrocinador</h4>
+            <p class="sp-desc">
+              Escríbenos y hagamos algo grande juntos.<br /><br />
+              <a href="mailto:aztech.1.17625@gmail.com" style="color:rgb(var(--accent));font-weight:600;">aztech.1.17625@gmail.com</a><br />
+              <a href="tel:+525574562682" style="color:rgb(var(--accent));font-weight:600;">+52 55 7456 2682</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Footer ───────── -->
+  <footer id="contacto" class="site-footer">
+    <div class="container footer-mini">
+      <div class="footer-mini-brand">
+        <img class="footer-logo" src="images/brand/logo.png" alt="Aztech I" />
+        <img class="footer-wordmark" src="images/brand/wordmark.png" alt="Aztech I" />
+      </div>
+      <div class="footer-mini-social">
+        <a href="https://www.instagram.com/aztech_1_17625/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+      <p class="footer-mini-credit" data-en='Made with <span class="heart">&#9829;</span> by Aztech I · FIRST Tech Challenge 17625' data-fr='Fait avec <span class="heart">&#9829;</span> par Aztech I · FIRST Tech Challenge 17625'>Hecho con <span class="heart">&#9829;</span> por Aztech I · FIRST Tech Challenge 17625</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/i18n.js"></script>
+</body>
+</html>
