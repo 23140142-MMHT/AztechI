@@ -1,17 +1,12 @@
-// ════════════════════════════════════════════════════════════════════════
-// Aztech II · FTC 17626 — Selector de idioma (ES / EN / FR)
-// Traducción 100% manual: el español es el contenido original del HTML;
-// cada elemento traducible lleva data-en y data-fr con su versión.
-// El idioma elegido se recuerda en localStorage para todo el sitio.
-// ════════════════════════════════════════════════════════════════════════
 (function () {
   "use strict";
 
   var KEY = "aztech-lang";
   var SUPPORTED = ["es", "en", "fr"];
-  var cache = new WeakMap(); // guarda el HTML original (ES) de cada elemento
+  var cache = new WeakMap();
 
   function translateEl(el, lang) {
+    if (!el || !el.getAttribute) return;
     if (!cache.has(el)) cache.set(el, el.innerHTML);
     var val = lang === "es" ? cache.get(el) : el.getAttribute("data-" + lang);
     if (val != null) el.innerHTML = val;
@@ -35,8 +30,10 @@
   }
 
   function init() {
-    var saved = "en";
-    try { saved = localStorage.getItem(KEY) || "en"; } catch (e) {}
+    var saved = "es";
+    try {
+      saved = localStorage.getItem(KEY) || "es";
+    } catch (e) {}
 
     document.querySelectorAll(".lang-btn").forEach(function (b) {
       b.addEventListener("click", function () {

@@ -1,103 +1,121 @@
-// ════════════════════════════════════════════════════════════════════════
-// Aztech II · FTC 17626 — interactividad del sitio
-// El menú flotante de la trayectoria es 100% CSS (hover); aquí solo
-// manejamos el respaldo visual si alguna imagen de temporada no carga.
-// ════════════════════════════════════════════════════════════════════════
 (function () {
   "use strict";
 
-  // Si una imagen de temporada falla, la sustituimos por un placeholder.
-  document.querySelectorAll(".season-photo").forEach(function (img) {
-    img.addEventListener("error", function () {
-      var fallback = document.createElement("div");
-      fallback.className = "season-photo season-photo--missing";
-      fallback.innerHTML = "Imagen<br>próximamente";
-      img.replaceWith(fallback);
+  function initSeasonFallbacks() {
+    var seasonPhotos = document.querySelectorAll(".season-photo");
+    seasonPhotos.forEach(function (img) {
+      if (!img) return;
+      img.addEventListener("error", function () {
+        var fallback = document.createElement("div");
+        fallback.className = "season-photo season-photo--missing";
+        fallback.innerHTML = "Imagen<br>próximamente";
+        img.replaceWith(fallback);
+      });
     });
-  });
 
-  // La foto del equipo también: si falta, evita el ícono roto.
-  var team = document.querySelector(".team-photo");
-  if (team) {
-    team.addEventListener("error", function () {
-      team.style.display = "none";
-    });
+    var team = document.querySelector(".team-photo");
+    if (team) {
+      team.addEventListener("error", function () {
+        team.style.display = "none";
+      });
+    }
+
+    var cycleImg = document.querySelector(".cycle-figure img");
+    if (cycleImg) {
+      cycleImg.addEventListener("error", function () {
+        var hint = document.createElement("span");
+        hint.className = "cycle-figure-hint";
+        hint.textContent = "Imagen del ciclo · warrior-cycle.png";
+        cycleImg.replaceWith(hint);
+      });
+    }
   }
 
-  // Imagen del Aztech Warrior Cycle: si aún no se sube, deja un aviso limpio.
-  var cycleImg = document.querySelector(".cycle-figure img");
-  if (cycleImg) {
-    cycleImg.addEventListener("error", function () {
-      var hint = document.createElement("span");
-      hint.className = "cycle-figure-hint";
-      hint.textContent = "Imagen del ciclo · brand/warrior-cycle.png";
-      cycleImg.replaceWith(hint);
-    });
-  }
+  function initPillarsDropdown() {
+    var dropdowns = document.querySelectorAll(".nav-dropdown");
+    if (!dropdowns.length) return;
 
-  // Menú desplegable "Our Pillars" (clic para abrir/cerrar; hover ya en CSS).
-  var dropdowns = document.querySelectorAll(".nav-dropdown");
+    function closeAll() {
+      dropdowns.forEach(function (d) {
+        d.classList.remove("open");
+        var button = d.querySelector(".nav-dropdown-btn");
+        if (button) button.setAttribute("aria-expanded", "false");
+      });
+    }
 
-  function closeAll() {
     dropdowns.forEach(function (d) {
-      d.classList.remove("open");
-      var b = d.querySelector(".nav-dropdown-btn");
-      if (b) b.setAttribute("aria-expanded", "false");
+      var button = d.querySelector(".nav-dropdown-btn");
+      if (!button) return;
+
+      button.addEventListener("click", function (e) {
+        e.stopPropagation();
+        var isOpen = d.classList.contains("open");
+        closeAll();
+
+        if (!isOpen) {
+          d.classList.add("open");
+          button.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+
+    document.addEventListener("click", closeAll);
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeAll();
     });
   }
 
-  dropdowns.forEach(function (d) {
-    var btn = d.querySelector(".nav-dropdown-btn");
-    if (!btn) return;
-    btn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      var isOpen = d.classList.contains("open");
-      closeAll();
-      if (!isOpen) {
-        d.classList.add("open");
-        btn.setAttribute("aria-expanded", "true");
-      }
-    });
-  });
+  function initDrawer() {
+    var burger = document.querySelector(".nav-burger");
+    var drawer = document.getElementById("site-drawer");
+    var backdrop = document.querySelector(".drawer-backdrop");
+    var drawerClose = document.querySelector(".drawer-close");
 
-  // Cerrar al hacer clic fuera o con Escape.
-  document.addEventListener("click", closeAll);
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeAll();
-  });
+    if (!burger && !drawer && !backdrop && !drawerClose) return;
 
-  // ── Menú lateral desplegable (drawer) ──────────────────────────────────
-  var burger = document.querySelector(".nav-burger");
-  var drawer = document.getElementById("site-drawer");
-  var backdrop = document.querySelector(".drawer-backdrop");
-  var drawerClose = document.querySelector(".drawer-close");
+    function openDrawer() {
+      document.body.classList.add("drawer-open");
+      if (burger) burger.setAttribute("aria-expanded", "true");
+      if (drawer) drawer.setAttribute("aria-hidden", "false");
+    }
 
-  function openDrawer() {
-    document.body.classList.add("drawer-open");
-    if (burger) burger.setAttribute("aria-expanded", "true");
-    if (drawer) drawer.setAttribute("aria-hidden", "false");
-  }
-  function closeDrawer() {
-    document.body.classList.remove("drawer-open");
-    if (burger) burger.setAttribute("aria-expanded", "false");
-    if (drawer) drawer.setAttribute("aria-hidden", "true");
-  }
+    function closeDrawer() {
+      document.body.classList.remove("drawer-open");
+      if (burger) burger.setAttribute("aria-expanded", "false");
+      if (drawer) drawer.setAttribute("aria-hidden", "true");
+    }
 
-  if (burger) {
-    burger.addEventListener("click", function (e) {
-      e.stopPropagation();
-      if (document.body.classList.contains("drawer-open")) closeDrawer();
-      else openDrawer();
+    if (burger) {
+      burger.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (document.body.classList.contains("drawer-open")) closeDrawer();
+        else openDrawer();
+      });
+    }
+
+    if (backdrop) backdrop.addEventListener("click", closeDrawer);
+    if (drawerClose) drawerClose.addEventListener("click", closeDrawer);
+
+    if (drawer) {
+      drawer.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", closeDrawer);
+      });
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeDrawer();
     });
   }
-  if (backdrop) backdrop.addEventListener("click", closeDrawer);
-  if (drawerClose) drawerClose.addEventListener("click", closeDrawer);
-  if (drawer) {
-    drawer.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", closeDrawer);
-    });
+
+  function init() {
+    initSeasonFallbacks();
+    initPillarsDropdown();
+    initDrawer();
   }
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeDrawer();
-  });
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
 })();
